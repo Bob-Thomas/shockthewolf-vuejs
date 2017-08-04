@@ -1,0 +1,41 @@
+@mixin triangle-clip($width, $height, $direction) {
+  width: $width;
+  height: $height;
+  /* The points are: centered top, left bottom, right bottom */
+  @if ($direction=='up') {
+    clip-path: polygon(50% 0, 0 95%, 100% 95%);
+  }
+  @if ($direction=='down') {
+    clip-path: polygon(50% 100%, 100% 0, 0 0);
+  }
+  @if ($direction=='left') {
+    clip-path: polygon(50% 50%, 0 0, 0 100%);
+  }
+  @if ($direction=='right') {
+    clip-path: polygon(50% 50%, 100% 0, 100% 100%);
+  }
+}
+
+@mixin transition($in) {
+  transition: $in;
+  -webkit-transition: $in;
+  -moz-transition: $in;
+  -o-transition: $in;
+  -ms-transition: $in;
+}
+
+@mixin transform($in) {
+  transform: $in;
+  -webkit-transform: $in;
+  -moz-transform: $in;
+  -o-transform: $in;
+  -ms-transform: $in;
+}
+
+@mixin animation($in) {
+  animation: $in;
+  -webkit-animation: $in;
+  -moz-animation: $in;
+  -o-animation: $in;
+  -ms-animation: $in;
+}

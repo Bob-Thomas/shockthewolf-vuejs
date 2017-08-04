@@ -1,0 +1,11 @@
+@import '../fonts.scss';
+.vue-typer {
+  text-align: center;
+  font-size: 2vmax;
+  .custom.caret {
+    background-color: lightgreen;
+  }
+  .custom.char {
+    color: lightgreen;
+  }
+}
