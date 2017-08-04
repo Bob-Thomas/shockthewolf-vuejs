@@ -11,6 +11,8 @@
 </template>
 
 <script>
+import apostle from 'apostle.io';
+apostle.domainKey = '48df2aaee6d64be31913da91b77259a83372d8c9';
 export default {
   name: 'contactModal',
   data () {
@@ -22,13 +24,11 @@ export default {
   },
   methods: {
     send () {
-      console.log('dave');
-      let data = {
-        from: `${this.name} <${this.email}>`,
-        to: 'postmaster@mail.shockthewolf.com',
-        subject: 'contact',
-        text: this.message
-      };
+      apostle.deliver('contact', { email: 'bobthomas295@gmail.com', sender_email: this.email, text: this.message, name: this.name });
+      this.email = '';
+      this.name = '';
+      this.message = '';
+      this.$modal.hide('contact-form');
     }
   }
 };

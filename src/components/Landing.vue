@@ -55,7 +55,8 @@ h2 {
   font-size: 10vmax;
   line-height: 3vmax;
   margin: 0px;
-  padding: 5vh;
+  padding-top: 6vh;
+  padding-bottom: 7vh;
 }
 
 h2 {

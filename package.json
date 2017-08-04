@@ -14,6 +14,9 @@
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
   },
   "dependencies": {
+    "apostle.io": "^1.0.1",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
     "three": "^0.86.0",
     "vue": "^2.3.3",
     "vue-js-modal": "^1.2.7",
