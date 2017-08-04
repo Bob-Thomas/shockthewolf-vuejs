@@ -10,7 +10,8 @@
       <vue-typer :text='msg' erase-style='select-back' erase-delay="50"></vue-typer>
     </div>
     <navigation></navigation>
-    <wiggly-button text='Contact me'></wiggly-button>
+    <wiggly-button @click.native='show' text='Contact me'></wiggly-button>
+    <contact-modal></contact-modal>
   </div>
 </template>
 
@@ -21,7 +22,7 @@ import {
 
 import Navigation from './Navigation';
 import WigglyButton from './WigglyButton';
-
+import ContactModal from './ContactModal';
 export default {
   name: 'landing',
   data () {
@@ -29,10 +30,17 @@ export default {
       msg: ['import {webdev, embedded, iot} from \'skills\'', '#include <skills.hpp>', 'from skills import webdev, embedded, iot', 'import shockthewolf.com.skills.*;']
     };
   },
+  methods: {
+    show () {
+      console.log('penis');
+      this.$modal.show('contact-form');
+    }
+  },
   components: {
     VueTyper,
     Navigation,
-    WigglyButton
+    WigglyButton,
+    ContactModal
   }
 };
 </script>
