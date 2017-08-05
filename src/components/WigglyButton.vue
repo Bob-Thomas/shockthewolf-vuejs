@@ -21,7 +21,7 @@ button {
   background: transparent;
   font-size: 2vmax;
   padding: 20px;
-  margin: 15vh auto;
+  margin: 11vh auto;
   cursor: pointer;
   background-color: transparent;
   border: 2px solid #fff;

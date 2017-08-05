@@ -7,10 +7,11 @@
       ENGINEERING
     </h2>
     <div class='text-center'>
-      <vue-typer :text='msg' erase-style='select-back' erase-delay="50"></vue-typer>
+      <vue-typer :text='msg' erase-style='select-back' :erase-delay="delay"></vue-typer>
     </div>
     <navigation></navigation>
     <wiggly-button @click.native='show' text='Contact me'></wiggly-button>
+    <social-buttons></social-buttons>
     <contact-modal></contact-modal>
   </div>
 </template>
@@ -23,16 +24,18 @@ import {
 import Navigation from './Navigation';
 import WigglyButton from './WigglyButton';
 import ContactModal from './ContactModal';
+import SocialButtons from './SocialButtons';
+
 export default {
   name: 'landing',
   data () {
     return {
+      delay: 50,
       msg: ['import {webdev, embedded, iot} from \'skills\'', '#include <skills.hpp>', 'from skills import webdev, embedded, iot', 'import shockthewolf.com.skills.*;']
     };
   },
   methods: {
     show () {
-      console.log('penis');
       this.$modal.show('contact-form');
     }
   },
@@ -40,7 +43,8 @@ export default {
     VueTyper,
     Navigation,
     WigglyButton,
-    ContactModal
+    ContactModal,
+    SocialButtons
   }
 };
 </script>
@@ -49,20 +53,6 @@ export default {
 <style scoped lang="scss">
 @import '../styles/colors.scss';
 @import '../styles/mixins.scss';
-h1,
-h2 {
-  color: $color-heading;
-  font-size: 10vmax;
-  line-height: 3vmax;
-  margin: 0px;
-  padding-top: 6vh;
-  padding-bottom: 7vh;
-}
-
-h2 {
-  font-size: 7vmax;
-}
-
 
 .button-container {
   font-size: 3vmax;

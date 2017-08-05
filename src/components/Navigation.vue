@@ -1,11 +1,7 @@
 <template>
   <div class="button-container text-center">
-
-    &lt;
-
-    <router-link to='webdev'>webdev</router-link>,
-
-    <router-link to='embedded'>embedded</router-link> &gt;
+    &nbsp;&nbsp;<router-link to='webdev'>webdev</router-link> &amp;&amp;
+    <router-link to='embedded'>embedded</router-link>
   </div>
 </template>
 

@@ -6,3 +6,21 @@
 @import './transitions/route.scss';
 @import './components/page.scss';
 @import './components/vue-typer.scss';
+
+body {
+  overflow: hidden;
+}
+
+h1,
+h2 {
+  color: $color-heading;
+  font-size: 10vmax;
+  line-height: 3vmax;
+  margin: 0px;
+  padding-top: 6vh;
+  padding-bottom: 7vh;
+}
+
+h2 {
+  font-size: 7vmax;
+}

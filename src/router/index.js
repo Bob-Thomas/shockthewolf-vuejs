@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Landing from '@/components/Landing';
+import Webdev from '@/components/Webdev';
 
 Vue.use(Router);
 
@@ -9,6 +10,11 @@ export default new Router({
     path: '/',
     name: 'Landing',
     component: Landing
+  },
+  {
+    path: '/webdev',
+    name: 'Webdev',
+    component: Webdev
   },
   {
     path: '*',

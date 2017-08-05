@@ -40,7 +40,7 @@ export default {
 
 .v--modal-box {
   height: auto !important;
-  background: $color-primary-0;
+  background: $color-primary-0 !important;
 }
 
 #form {
