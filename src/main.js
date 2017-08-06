@@ -9,7 +9,6 @@ import vmodal from 'vue-js-modal';
 import 'vue-awesome/icons';
 import Icon from 'vue-awesome/components/Icon';
 Vue.config.productionTip = false;
-
 Vue.component('icon', Icon);
 Vue.use(vmodal);
 
